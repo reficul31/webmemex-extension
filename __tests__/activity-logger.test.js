@@ -1,5 +1,10 @@
-const activityLogger = require('../src/activity-logger')
+import {isWorthRemembering} from 'src/activity-logger'
 
-test('checks 1+2 is equal to 3', () => {
-    expect(1 + 2).toBe(3)
+describe('isWorthRemembering acceptance testing', ()=>{
+    test('should accept links of type https://example.com', () => {
+        expect(isWorthRemembering({url:'https://example.com'})).toBe(true)
+    })
+    test('should reject links of type example.com', () => {
+        expect(isWorthRemembering({url:'example.com'})).toBe(false)
+    })
 })
