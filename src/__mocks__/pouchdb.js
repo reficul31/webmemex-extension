@@ -1,4 +1,5 @@
 import fromPairs from 'lodash/fp/fromPairs'
+
 import PouchDB from 'pouchdb-browser'
 import PouchDBQuickSearch from 'pouchdb-quick-search'
 import PouchDBFind from 'pouchdb-find'
@@ -9,10 +10,9 @@ PouchDB.plugin(PouchDBQuickSearch)
 PouchDB.plugin(PouchDBFind)
 PouchDB.plugin(PouchDBUpsert)
 PouchDB.plugin(PouchDBMemory)
->>>>>>> Partial implementation of the unit testing of activity logger
 
 const db = new PouchDB({
-    name: 'webmemex',
+    name: 'testdb',
     auto_compaction: true,
 })
 
@@ -50,3 +50,5 @@ export const normaliseFindResult = result => ({
 // Get rows of a query result indexed by doc id, as an {id: row} object.
 export const resultRowsById = result =>
     fromPairs(result.rows.map(row => [row.id, row]))
+
+export const destroyDatabase = db.destroy()
