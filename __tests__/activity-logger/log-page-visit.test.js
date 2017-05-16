@@ -1,7 +1,6 @@
 import maybeLogPageVisit, { storeVisit } from 'src/activity-logger/background/log-page-visit'
 import * as activityLogger from 'src/activity-logger'
 import * as storePage from 'src/page-storage/store-page'
-jest.mock('src/pouchdb')
 
 afterAll(() => {
 	pouchdb.destroyDatabase()

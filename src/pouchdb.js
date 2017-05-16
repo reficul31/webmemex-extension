@@ -3,13 +3,11 @@ import PouchDB from 'pouchdb-browser'
 import PouchDBQuickSearch from 'pouchdb-quick-search'
 import PouchDBFind from 'pouchdb-find'
 import PouchDBUpsert from 'pouchdb-upsert'
-import PouchDBMemory from 'pouchdb-adapter-memory'
 
 PouchDB.plugin(PouchDBQuickSearch)
 PouchDB.plugin(PouchDBFind)
 PouchDB.plugin(PouchDBUpsert)
 PouchDB.plugin(PouchDBMemory)
->>>>>>> Partial implementation of the unit testing of activity logger
 
 const db = new PouchDB({
     name: 'webmemex',

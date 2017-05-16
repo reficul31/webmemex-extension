@@ -70,6 +70,8 @@
     "jest-cli": "^20.0.0",
     "loose-envify": "^1.3.0",
     "postcss-cssnext": "^2.9.0",
+    "pouchdb": "^6.2.0",
+    "pouchdb-adapter-memory": "^6.2.0",
     "react-addons-test-utils": "^15.5.1",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
@@ -87,12 +89,14 @@
     "transform": {
       "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
     },
-    "modulePaths": ["<rootDir>"],
+    "modulePaths": [
+      "<rootDir>"
+    ],
     "unmockedModulePathPatterns": [
-        "<rootDir>/node_modules/react",
-        "<rootDir>/node_modules/react-dom",
-        "<rootDir>/node_modules/react-addons-test-utils",
-        "<rootDir>/node_modules/fbjs"
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
     ]
-}
+  }
 }

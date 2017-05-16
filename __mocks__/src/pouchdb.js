@@ -1,6 +1,6 @@
 import fromPairs from 'lodash/fp/fromPairs'
 
-import PouchDB from 'pouchdb-browser'
+import PouchDB from 'pouchdb'
 import PouchDBQuickSearch from 'pouchdb-quick-search'
 import PouchDBFind from 'pouchdb-find'
 import PouchDBUpsert from 'pouchdb-upsert'
@@ -14,6 +14,7 @@ PouchDB.plugin(PouchDBMemory)
 const db = new PouchDB({
     name: 'testdb',
     auto_compaction: true,
+    adapter: 'memory',
 })
 
 export default db
