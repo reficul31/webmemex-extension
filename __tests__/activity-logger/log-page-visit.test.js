@@ -1,4 +1,4 @@
-import maybeLogPageVisit from 'src/activity-logger/background/log-page-visit'
+import maybeLogPageVisit, { storeVisit } from 'src/activity-logger/background/log-page-visit'
 import * as activityLogger from 'src/activity-logger'
 import * as storePage from 'src/page-storage/store-page'
 jest.mock('src/pouchdb')
@@ -7,16 +7,28 @@ afterAll(() => {
 	pouchdb.destroyDatabase()
 })
 
-describe('maybeLogPageVisit tests', () => {
-	test('calls the function isWorthRemembering', () => {
-			activityLogger.isWorthRemembering = jest.fn()
-			maybeLogPageVisit({tabId:12345, url:'www.example.com'})
-			expect(activityLogger.isWorthRemembering).toBeCalledWith({url:'www.example.com'})
+describe('maybeLogPageVisit mock tests', () => {
+	test('should call the function isWorthRemembering', () => {
+		const spy = jest.spyOn(activityLogger, 'isWorthRemembering')
+		maybeLogPageVisit({tabId:1, url:'https://example.com'})
+		expect(spy).toBeCalledWith({url:'https://example.com'})
+		spy.mockRestore()
 	})
 
-	test('calls the function reidentifyOrStorePage', () => {
-		storePage.reidentifyOrStorePage = jest.fn()
-		maybeLogPageVisit({tabId:12345, url:'https://example.com'})
-		expect(storePage.reidentifyOrStorePage).toBeCalledWith({tabId:12345, url:'https://example.com'})
+	test('should call the function reidentifyOrStorePage if isWorthRemembering is true', () => {
+		const spy = jest.spyOn(storePage, 'reidentifyOrStorePage').mockReturnValueOnce({
+			page:{},
+			finalPagePromise:{},
+		})
+		maybeLogPageVisit({tabId:1, url:'https://example.com'})
+		expect(spy).toBeCalledWith({tabId:1, url:'https://example.com'})
+		spy.mockRestore()
+	})
+
+	test('should not call the function reidentifyOrStorePage if isWorthRemembering is false', () => {
+		const spy = jest.spyOn(storePage, 'reidentifyOrStorePage')
+		maybeLogPageVisit({tabId:1, url:'example.com'})
+		expect(spy).toHaveBeenCalledTimes(0)
+		spy.mockRestore()
 	})
 })
