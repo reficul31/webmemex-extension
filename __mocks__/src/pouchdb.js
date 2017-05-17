@@ -51,5 +51,3 @@ export const normaliseFindResult = result => ({
 // Get rows of a query result indexed by doc id, as an {id: row} object.
 export const resultRowsById = result =>
     fromPairs(result.rows.map(row => [row.id, row]))
-
-export const destroyDatabase = db.destroy()
