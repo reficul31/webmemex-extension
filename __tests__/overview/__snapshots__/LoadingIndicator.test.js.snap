@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Overview snapshot tests should test against the given snapshot 1`] = `
+exports[`LoadingIndicator snapshot tests should test against the given snapshot 1`] = `
 <div
-  className={undefined}
+  className="container"
 >
   <span
-    className=""
+    className="dotone dot"
   />
   <span
-    className=""
+    className="dottwo dot"
   />
   <span
-    className=""
+    className="dotthree dot"
   />
 </div>
 `;
