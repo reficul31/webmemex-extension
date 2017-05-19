@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VisitAsListItem snapshot tests should test against the given snapshot 1`] = `
+<a
+  className="root"
+  href="https://www.google.co.in/?gfe_rd=cr&ei=zrsdWc2dH9KnvwTejJOIBQ"
+  onClick={[Function]}
+>
+  <div
+    className="screenshotContainer"
+  >
+    <img
+      className="favIcon"
+      src="img/null-icon.png"
+    />
+  </div>
+  <div
+    className="descriptionContainer"
+  >
+    <div
+      className="title"
+      title="Google"
+    >
+      Google
+    </div>
+    <div
+      className="url"
+    >
+      https://www.google.co.in/?gfe_rd=cr&ei=zrsdWc2dH9KnvwTejJOIBQ
+    </div>
+    <div
+      className="time"
+    >
+      20 minutes ago
+    </div>
+  </div>
+  <div
+    className="buttonsContainer"
+  >
+    <img
+      alt="🗑 remove"
+      src="img/trash-icon.png"
+    />
+  </div>
+</a>
+`;

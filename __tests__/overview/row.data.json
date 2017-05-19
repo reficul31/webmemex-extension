@@ -1,0 +1,28 @@
+{
+  "doc": {
+    "visitStart": 1495120846992,
+    "url": "https://www.google.co.in/?gfe_rd=cr&ei=zrsdWc2dH9KnvwTejJOIBQ",
+    "page": {
+      "url": "https://www.google.co.in/?gfe_rd=cr&ei=zrsdWc2dH9KnvwTejJOIBQ",
+      "extractedText": {
+        "bodyInnerText": "Screen-reader users, click here to turn off Google Instant.\nGmail\nImages\n\n\nIndia\nGoogle.co.in offered in: हिन्दी বাংলা తెలుగు मराठी தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം ਪੰਜਾਬੀ\nPrivacy Terms Settings  Use Google.com Advertising Business About\n"
+      },
+      "extractedMetadata": {
+        "icon_url": "https://www.google.co.in/images/branding/product/ico/googleg_lodp.ico",
+        "title": "Google",
+        "url": "https://www.google.co.in/?ei=zrsdWc2dH9KnvwTejJOIBQ",
+        "provider": "google"
+      },
+      "_id": "page/1495120848122/1895257124",
+      "_rev": "3-8472fd46e514e7b144bae11b72faf834",
+      "title": "Google"
+    },
+    "_id": "visit/1495120846992/5167429354",
+    "_rev": "1-ba5508c8e56b15757bfbb47f27ba789c"
+  },
+  "id": "visit/1495120846992/5167429354",
+  "key": "visit/1495120846992/5167429354",
+  "value": {
+    "rev": "1-ba5508c8e56b15757bfbb47f27ba789c"
+  }
+}
