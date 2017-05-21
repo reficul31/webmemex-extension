@@ -1,10 +1,10 @@
 import React from 'react'
 import DateRangeSelection from 'src/overview/components/DateRangeSelection'
 import {shallow, mount} from 'enzyme'
-import DatePicker from 'react-datepicker'
 
 describe('DateRangeSelection snapshot tests', () => {
 	test('should mount without error containing two DatePicker', () => {
+		Date.now = jest.fn(() => 1487076708000) 
 		const startDate = new Date('10 02 2016').getMilliseconds()
 		const endDate = new Date('10 02 2017').getMilliseconds()
 		const onStartDateChange = jest.fn()
@@ -12,7 +12,7 @@ describe('DateRangeSelection snapshot tests', () => {
 		const component = shallow(
 			<DateRangeSelection startDate={startDate} endDate={endDate} onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
 			)
-		expect(component.find(DatePicker)).toHaveLength(2)
+		expect(component).toMatchSnapshot()	
 	})
 
 	test('should contain the props given to it', () => {

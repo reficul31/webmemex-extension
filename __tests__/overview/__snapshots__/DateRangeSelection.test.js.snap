@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateRangeSelection snapshot tests should mount without error containing two DatePicker 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="dateRangeSelection"
+>
+    <DatePicker
+        className="datePicker"
+        dateFormat="DD-MM-YYYY"
+        dateFormatCalendar="MMMM YYYY"
+        disabled={false}
+        disabledKeyboardNavigation={false}
+        dropdownMode="scroll"
+        endDate={"1970-01-01T00:00:00.000Z"}
+        isClearable={true}
+        maxDate={"2017-02-14T12:51:48.000Z"}
+        monthsShown={1}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMonthChange={[Function]}
+        placeholderText="after.."
+        popoverAttachment="top left"
+        popoverTargetAttachment="bottom left"
+        popoverTargetOffset="10px 0"
+        selected={0}
+        selectsStart={true}
+        startDate={"1970-01-01T00:00:00.000Z"}
+        tetherConstraints={
+            Array [
+                Object {
+                  "attachment": "together",
+                  "to": "window",
+                },
+              ]
+        }
+        utcOffset={330}
+        withPortal={false}
+    />
+    <DatePicker
+        className="datePicker"
+        dateFormat="DD-MM-YYYY"
+        dateFormatCalendar="MMMM YYYY"
+        disabled={false}
+        disabledKeyboardNavigation={false}
+        dropdownMode="scroll"
+        endDate={"1970-01-01T00:00:00.000Z"}
+        isClearable={true}
+        maxDate={"2017-02-14T12:51:48.000Z"}
+        monthsShown={1}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMonthChange={[Function]}
+        placeholderText="before.."
+        popoverAttachment="top left"
+        popoverTargetAttachment="bottom left"
+        popoverTargetOffset="10px 0"
+        selected={0}
+        selectsEnd={true}
+        startDate={"1970-01-01T00:00:00.000Z"}
+        tetherConstraints={
+            Array [
+                Object {
+                  "attachment": "together",
+                  "to": "window",
+                },
+              ]
+        }
+        utcOffset={330}
+        withPortal={false}
+    />
+</div>,
+  "nodes": Array [
+    <div
+      className="dateRangeSelection"
+>
+      <DatePicker
+            className="datePicker"
+            dateFormat="DD-MM-YYYY"
+            dateFormatCalendar="MMMM YYYY"
+            disabled={false}
+            disabledKeyboardNavigation={false}
+            dropdownMode="scroll"
+            endDate={"1970-01-01T00:00:00.000Z"}
+            isClearable={true}
+            maxDate={"2017-02-14T12:51:48.000Z"}
+            monthsShown={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMonthChange={[Function]}
+            placeholderText="after.."
+            popoverAttachment="top left"
+            popoverTargetAttachment="bottom left"
+            popoverTargetOffset="10px 0"
+            selected={0}
+            selectsStart={true}
+            startDate={"1970-01-01T00:00:00.000Z"}
+            tetherConstraints={
+                  Array [
+                        Object {
+                          "attachment": "together",
+                          "to": "window",
+                        },
+                      ]
+            }
+            utcOffset={330}
+            withPortal={false}
+      />
+      <DatePicker
+            className="datePicker"
+            dateFormat="DD-MM-YYYY"
+            dateFormatCalendar="MMMM YYYY"
+            disabled={false}
+            disabledKeyboardNavigation={false}
+            dropdownMode="scroll"
+            endDate={"1970-01-01T00:00:00.000Z"}
+            isClearable={true}
+            maxDate={"2017-02-14T12:51:48.000Z"}
+            monthsShown={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMonthChange={[Function]}
+            placeholderText="before.."
+            popoverAttachment="top left"
+            popoverTargetAttachment="bottom left"
+            popoverTargetOffset="10px 0"
+            selected={0}
+            selectsEnd={true}
+            startDate={"1970-01-01T00:00:00.000Z"}
+            tetherConstraints={
+                  Array [
+                        Object {
+                          "attachment": "together",
+                          "to": "window",
+                        },
+                      ]
+            }
+            utcOffset={330}
+            withPortal={false}
+      />
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <DateRangeSelection
+        endDate={0}
+        onEndDateChange={[Function]}
+        onStartDateChange={[Function]}
+        startDate={0}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "endDate": 0,
+          "onEndDateChange": [Function],
+          "onStartDateChange": [Function],
+          "startDate": 0,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="dateRangeSelection"
+>
+          <DatePicker
+                    className="datePicker"
+                    dateFormat="DD-MM-YYYY"
+                    dateFormatCalendar="MMMM YYYY"
+                    disabled={false}
+                    disabledKeyboardNavigation={false}
+                    dropdownMode="scroll"
+                    endDate={"1970-01-01T00:00:00.000Z"}
+                    isClearable={true}
+                    maxDate={"2017-02-14T12:51:48.000Z"}
+                    monthsShown={1}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onMonthChange={[Function]}
+                    placeholderText="after.."
+                    popoverAttachment="top left"
+                    popoverTargetAttachment="bottom left"
+                    popoverTargetOffset="10px 0"
+                    selected={0}
+                    selectsStart={true}
+                    startDate={"1970-01-01T00:00:00.000Z"}
+                    tetherConstraints={
+                              Array [
+                                        Object {
+                                          "attachment": "together",
+                                          "to": "window",
+                                        },
+                                      ]
+                    }
+                    utcOffset={330}
+                    withPortal={false}
+          />
+          <DatePicker
+                    className="datePicker"
+                    dateFormat="DD-MM-YYYY"
+                    dateFormatCalendar="MMMM YYYY"
+                    disabled={false}
+                    disabledKeyboardNavigation={false}
+                    dropdownMode="scroll"
+                    endDate={"1970-01-01T00:00:00.000Z"}
+                    isClearable={true}
+                    maxDate={"2017-02-14T12:51:48.000Z"}
+                    monthsShown={1}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onMonthChange={[Function]}
+                    placeholderText="before.."
+                    popoverAttachment="top left"
+                    popoverTargetAttachment="bottom left"
+                    popoverTargetOffset="10px 0"
+                    selected={0}
+                    selectsEnd={true}
+                    startDate={"1970-01-01T00:00:00.000Z"}
+                    tetherConstraints={
+                              Array [
+                                        Object {
+                                          "attachment": "together",
+                                          "to": "window",
+                                        },
+                                      ]
+                    }
+                    utcOffset={330}
+                    withPortal={false}
+          />
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div
+          className="dateRangeSelection"
+>
+          <DatePicker
+                    className="datePicker"
+                    dateFormat="DD-MM-YYYY"
+                    dateFormatCalendar="MMMM YYYY"
+                    disabled={false}
+                    disabledKeyboardNavigation={false}
+                    dropdownMode="scroll"
+                    endDate={"1970-01-01T00:00:00.000Z"}
+                    isClearable={true}
+                    maxDate={"2017-02-14T12:51:48.000Z"}
+                    monthsShown={1}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onMonthChange={[Function]}
+                    placeholderText="after.."
+                    popoverAttachment="top left"
+                    popoverTargetAttachment="bottom left"
+                    popoverTargetOffset="10px 0"
+                    selected={0}
+                    selectsStart={true}
+                    startDate={"1970-01-01T00:00:00.000Z"}
+                    tetherConstraints={
+                              Array [
+                                        Object {
+                                          "attachment": "together",
+                                          "to": "window",
+                                        },
+                                      ]
+                    }
+                    utcOffset={330}
+                    withPortal={false}
+          />
+          <DatePicker
+                    className="datePicker"
+                    dateFormat="DD-MM-YYYY"
+                    dateFormatCalendar="MMMM YYYY"
+                    disabled={false}
+                    disabledKeyboardNavigation={false}
+                    dropdownMode="scroll"
+                    endDate={"1970-01-01T00:00:00.000Z"}
+                    isClearable={true}
+                    maxDate={"2017-02-14T12:51:48.000Z"}
+                    monthsShown={1}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onMonthChange={[Function]}
+                    placeholderText="before.."
+                    popoverAttachment="top left"
+                    popoverTargetAttachment="bottom left"
+                    popoverTargetOffset="10px 0"
+                    selected={0}
+                    selectsEnd={true}
+                    startDate={"1970-01-01T00:00:00.000Z"}
+                    tetherConstraints={
+                              Array [
+                                        Object {
+                                          "attachment": "together",
+                                          "to": "window",
+                                        },
+                                      ]
+                    }
+                    utcOffset={330}
+                    withPortal={false}
+          />
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <DateRangeSelection
+    endDate={0}
+    onEndDateChange={[Function]}
+    onStartDateChange={[Function]}
+    startDate={0}
+/>,
+}
+`;
