@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImportContainer snapshot tests should test against the given snapshot 1`] = `
+<div>
+  <h1
+    className="routeTitle"
+  >
+    Import
+  </h1>
+  <p>
+    Import specific components to come in here.
+  </p>
+</div>
+`;
