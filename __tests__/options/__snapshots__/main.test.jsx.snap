@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component tests should mount without error and test against the given snapshot 1`] = `
+<div
+  className="root"
+>
+  <nav
+    className="root"
+  >
+    <h1
+      className="title"
+    >
+      Web Memex
+    </h1>
+    <ul
+      className="nav"
+    >
+      <li
+        className="navItem"
+      >
+        <a
+          className="navLink"
+          href="#/import"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Import
+        </a>
+      </li>
+      <li
+        className="navItem"
+      >
+        <a
+          className="navLink isActive"
+          href="#/settings"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Settings
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div
+    className="route"
+  >
+    <div>
+      <h1
+        className="routeTitle"
+      >
+        Settings
+      </h1>
+      <p>
+        Settings specific components to come in here.
+      </p>
+    </div>
+  </div>
+</div>
+`;
