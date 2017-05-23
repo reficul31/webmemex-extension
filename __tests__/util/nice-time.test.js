@@ -31,7 +31,7 @@ describe('niceTime tests', () => {
 	test('should return the day and timestamp for timeperiod less than 3 days', () => {
 		const date = new Date()
 		date.setTime(1495346386856)
-		const now = new Date()
+		const now = new Date(date)
 		now.setHours(date.getHours() + 32)
 		expect(niceTime(date, {now})).toBe(`Sun ${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}`)
 	})
