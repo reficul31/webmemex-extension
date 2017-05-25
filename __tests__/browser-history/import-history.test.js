@@ -17,6 +17,7 @@ describe('getOldestVisitTimestamp tests', () => {
 		})
 		const oldestVisit = await getOldestVisitTimestamp()
 		expect(spy).toHaveBeenCalledWith("visit/1234567890123/1234567890")
+		spy.mockRestore()
 	})
 })
 
