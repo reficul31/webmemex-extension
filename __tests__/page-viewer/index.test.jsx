@@ -18,20 +18,17 @@ describe('LinkToLocalVersion snapshot tests', () => {
 describe('localVersionAvailable tests', () => {
     test('should return true when the page is available', () => {
         let page = {
-            'extractedText': {
-                'bodyInnerText': 'bodyInnerText',
-                'content': 'content',
+            '_attachments': {
+                'frozen-page.html': 'htmldoc',
             },
         }
         expect(localVersionAvailable({page})).toBeTruthy()
     })
 
-    test('should return undefined when the content is not available', () => {
+    test('should return false when the content is not available', () => {
         let page = {
-            'extractedText': {
-                'bodyInnerText': 'bodyInnerText',
-            },
+            '_attachments': {},
         }
-        expect(localVersionAvailable({page})).toBeUndefined()
+        expect(localVersionAvailable({page})).toBeFalsy()
     })
 })
