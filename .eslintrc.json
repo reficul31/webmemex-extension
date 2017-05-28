@@ -1,9 +1,11 @@
 {
     "env": {
         "browser": true,
-        "webextensions": true
+        "webextensions": true,
+        "jest/globals": true
     },
     "extends": [
+        "plugin:jest/recommended",
         "plugin:import/recommended",
         "plugin:import/react",
         "plugin:promise/recommended",
@@ -11,6 +13,9 @@
         "standard",
         "standard-react"
     ],
+    "globals": {
+        "db": true
+    },
     "settings": {
         "import/resolver": {
             "node": {
@@ -26,6 +31,7 @@
         }
     },
     "plugins": [
+        "jest",
         "standard",
         "import",
         "promise",
@@ -54,6 +60,8 @@
         "react/jsx-filename-extension": "error",
         "react/prefer-stateless-function": "warn",
         "react/sort-comp": "warn",
-        "react/jsx-max-props-per-line": [1, { "when": "multiline" }]
+        "react/jsx-max-props-per-line": [1, { "when": "multiline" }],
+        "import/namespace": "off",
+        "import/default": "off"
     }
 }

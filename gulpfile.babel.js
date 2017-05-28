@@ -106,7 +106,7 @@ gulp.task('copyStaticFiles', () => {
 })
 
 gulp.task('lint', () => {
-    return gulp.src(['src/**/*.js', 'src/**/*.jsx'])
+    return gulp.src(['src/**/*.js', 'src/**/*.jsx', '__tests__/**/*.js', '__tests__/**/*.jsx', '__mocks__/src/**/*.js', '__mocks__/src/**/*.jsx'])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.results(results => {
