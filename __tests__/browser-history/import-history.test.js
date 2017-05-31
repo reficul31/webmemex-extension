@@ -9,7 +9,7 @@ describe('getOldestVisitTimestamp tests', () => {
 
     test('should call the function convertVisitDocId', async () => {
         const spy = jest.spyOn(activityLogger, 'convertVisitDocId')
-        db.allDocs = jest.fn().mockReturnValue({
+        db.allDocs = jest.fn().mockReturnValue({                    /* global db */
             'rows': [
                 {'id': 'visit/1234567890123/1234567890'},
                 {'id': 'visit/0987654321098/0987654321'},

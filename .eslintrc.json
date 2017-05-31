@@ -13,9 +13,6 @@
         "standard",
         "standard-react"
     ],
-    "globals": {
-        "db": true
-    },
     "settings": {
         "import/resolver": {
             "node": {

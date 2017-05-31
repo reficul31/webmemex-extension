@@ -3,7 +3,7 @@ import * as activityLogger from 'src/activity-logger'
 import * as storePage from 'src/page-storage/store-page'
 
 afterAll(async () => {
-    await db.destroy()
+    await db.destroy()          /* global db */
 })
 
 describe('maybeLogPageVisit mock tests', () => {
