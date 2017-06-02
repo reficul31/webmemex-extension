@@ -2,12 +2,9 @@ import fromPairs from 'lodash/fp/fromPairs'
 import PouchDB from 'pouchdb-browser'
 import PouchDBQuickSearch from 'pouchdb-quick-search'
 import PouchDBFind from 'pouchdb-find'
-import PouchDBUpsert from 'pouchdb-upsert'
 
 PouchDB.plugin(PouchDBQuickSearch)
 PouchDB.plugin(PouchDBFind)
-PouchDB.plugin(PouchDBUpsert)
-PouchDB.plugin(PouchDBMemory)
 
 const db = new PouchDB({
     name: 'webmemex',

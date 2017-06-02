@@ -30,7 +30,7 @@ ShallowWrapper {
         >
             20 March 2014
         </time>
-        <VisitAsListItem
+        <Connect(VisitAsListItem)
             compact={undefined}
             doc={
                 Object {
@@ -64,7 +64,7 @@ ShallowWrapper {
               }
         }
     >
-        <VisitAsListItem
+        <Connect(VisitAsListItem)
             compact={undefined}
             doc={
                 Object {
@@ -98,7 +98,7 @@ ShallowWrapper {
               }
         }
     >
-        <VisitAsListItem
+        <Connect(VisitAsListItem)
             compact={undefined}
             doc={
                 Object {
@@ -149,7 +149,7 @@ ShallowWrapper {
             >
                   20 March 2014
             </time>
-            <VisitAsListItem
+            <Connect(VisitAsListItem)
                   compact={undefined}
                   doc={
                         Object {
@@ -183,7 +183,7 @@ ShallowWrapper {
                       }
             }
       >
-            <VisitAsListItem
+            <Connect(VisitAsListItem)
                   compact={undefined}
                   doc={
                         Object {
@@ -217,7 +217,7 @@ ShallowWrapper {
                       }
             }
       >
-            <VisitAsListItem
+            <Connect(VisitAsListItem)
                   compact={undefined}
                   doc={
                         Object {
@@ -660,7 +660,7 @@ ShallowWrapper {
                     >
                               20 March 2014
                     </time>
-                    <VisitAsListItem
+                    <Connect(VisitAsListItem)
                               compact={undefined}
                               doc={
                                         Object {
@@ -694,7 +694,7 @@ ShallowWrapper {
                                       }
                     }
           >
-                    <VisitAsListItem
+                    <Connect(VisitAsListItem)
                               compact={undefined}
                               doc={
                                         Object {
@@ -728,7 +728,7 @@ ShallowWrapper {
                                       }
                     }
           >
-                    <VisitAsListItem
+                    <Connect(VisitAsListItem)
                               compact={undefined}
                               doc={
                                         Object {
@@ -779,7 +779,7 @@ ShallowWrapper {
                     >
                               20 March 2014
                     </time>
-                    <VisitAsListItem
+                    <Connect(VisitAsListItem)
                               compact={undefined}
                               doc={
                                         Object {
@@ -813,7 +813,7 @@ ShallowWrapper {
                                       }
                     }
           >
-                    <VisitAsListItem
+                    <Connect(VisitAsListItem)
                               compact={undefined}
                               doc={
                                         Object {
@@ -847,7 +847,7 @@ ShallowWrapper {
                                       }
                     }
           >
-                    <VisitAsListItem
+                    <Connect(VisitAsListItem)
                               compact={undefined}
                               doc={
                                         Object {
