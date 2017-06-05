@@ -1,48 +1,223 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layout snapshot tests should test against the given snapshot 1`] = `
-<div
-  className="root"
->
-  <nav
+exports[`Layout snapshot tests should render without an error 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
     className="root"
-  >
-    <h1
-      className="title"
+>
+    <Navigation
+        currentLocation={
+            Object {
+                "name": "Settings",
+                "pathname": "/settings",
+              }
+        }
+        routes={
+            Array [
+                Object {
+                  "component": [Function],
+                  "name": "Import",
+                  "pathname": "/import",
+                },
+                Object {
+                  "component": [Function],
+                  "name": "Settings",
+                  "pathname": "/settings",
+                },
+              ]
+        }
+    />
+    <div
+        className="route"
     >
-      Web Memex
-    </h1>
-    <ul
-      className="nav"
-    >
-      <li
-        className="navItem"
+        <div>
+            Layout Component
+        </div>
+    </div>
+</div>,
+  "nodes": Array [
+    <div
+      className="root"
+>
+      <Navigation
+            currentLocation={
+                  Object {
+                        "name": "Settings",
+                        "pathname": "/settings",
+                      }
+            }
+            routes={
+                  Array [
+                        Object {
+                          "component": [Function],
+                          "name": "Import",
+                          "pathname": "/import",
+                        },
+                        Object {
+                          "component": [Function],
+                          "name": "Settings",
+                          "pathname": "/settings",
+                        },
+                      ]
+            }
+      />
+      <div
+            className="route"
       >
-        <a
-          className="navLink"
-          href="#/import"
-          onClick={[Function]}
-          style={Object {}}
-        >
-          Import
-        </a>
-      </li>
-      <li
-        className="navItem"
-      >
-        <a
-          className="navLink"
-          href="#/settings"
-          onClick={[Function]}
-          style={Object {}}
-        >
-          Settings
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <div
-    className="route"
-  />
-</div>
+            <div>
+                  Layout Component
+            </div>
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Layout
+        location={
+                Object {
+                        "name": "Settings",
+                        "pathname": "/settings",
+                      }
+        }
+>
+        <div>
+                Layout Component
+        </div>
+</Layout>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "children": <div>
+            Layout Component
+</div>,
+          "location": Object {
+            "name": "Settings",
+            "pathname": "/settings",
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="root"
+>
+          <Navigation
+                    currentLocation={
+                              Object {
+                                        "name": "Settings",
+                                        "pathname": "/settings",
+                                      }
+                    }
+                    routes={
+                              Array [
+                                        Object {
+                                          "component": [Function],
+                                          "name": "Import",
+                                          "pathname": "/import",
+                                        },
+                                        Object {
+                                          "component": [Function],
+                                          "name": "Settings",
+                                          "pathname": "/settings",
+                                        },
+                                      ]
+                    }
+          />
+          <div
+                    className="route"
+          >
+                    <div>
+                              Layout Component
+                    </div>
+          </div>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div
+          className="root"
+>
+          <Navigation
+                    currentLocation={
+                              Object {
+                                        "name": "Settings",
+                                        "pathname": "/settings",
+                                      }
+                    }
+                    routes={
+                              Array [
+                                        Object {
+                                          "component": [Function],
+                                          "name": "Import",
+                                          "pathname": "/import",
+                                        },
+                                        Object {
+                                          "component": [Function],
+                                          "name": "Settings",
+                                          "pathname": "/settings",
+                                        },
+                                      ]
+                    }
+          />
+          <div
+                    className="route"
+          >
+                    <div>
+                              Layout Component
+                    </div>
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Layout
+    location={
+        Object {
+            "name": "Settings",
+            "pathname": "/settings",
+          }
+    }
+>
+    <div>
+        Layout Component
+    </div>
+</Layout>,
+}
 `;

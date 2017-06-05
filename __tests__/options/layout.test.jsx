@@ -1,16 +1,31 @@
 import React from 'react'
 import Layout from 'src/options/layout'
-import renderer from 'react-test-renderer'
-import { Router, Route, hashHistory } from 'react-router'
+import {shallow, mount} from 'enzyme'
 
 describe('Layout snapshot tests', () => {
-    test('should test against the given snapshot', () => {
-        const component = renderer.create(
-            <Router history={hashHistory}>
-                <Route path='/' component={Layout} />
-            </Router>
+    test('should render without an error', () => {
+        const location = {
+            name: 'Settings',
+            pathname: '/settings',
+        }
+        const tree = shallow(
+            <Layout location={location}>
+                <div>Layout Component</div>
+            </Layout>
             )
-        const tree = component.toJSON()
         expect(tree).toMatchSnapshot()
+    })
+
+    test('should contain the props given to it', () => {
+        const location = {
+            name: 'Settings',
+            pathname: '/settings',
+        }
+        const component = mount(
+            <Layout location={location}>
+                <div>Layout Component</div>
+            </Layout>
+            )
+        expect(component.prop('location')).toBe(location)
     })
 })
