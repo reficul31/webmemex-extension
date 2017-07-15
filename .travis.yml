@@ -4,6 +4,9 @@ node_js:
 script:
     - npm run test # first run tests, to fail quickly.
     - npm run build
-cache: yarn
 notifications:
     email: false
+branches:
+    only:
+    - gsoc-ci
+    - /^test-.*$/
