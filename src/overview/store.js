@@ -15,7 +15,7 @@ const rootEpic = combineEpics(
 
 export default function configureStore({ReduxDevTools = undefined} = {}) {
     const enhancers = [
-        overview.enhancer,
+        // overview.enhancer,
         applyMiddleware(
             createEpicMiddleware(rootEpic),
             thunk
