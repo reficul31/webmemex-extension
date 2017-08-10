@@ -6,8 +6,15 @@ import delay from 'src/util/delay'
 
 import { generateVisitDocId, isLoggable, shouldBeLogged } from '..'
 
-
-// Store the visit in PouchDB.
+/**
+* Store the visit in PouchDB and return the visit instance as an object
+*
+* @param {Number} timestamp - timestamp of the visit
+* @param {string} url - URL of the visit document
+* @param {Page} page - page studb of the visit document
+*
+* @returns {Visit} - instance of the visit
+*/
 async function storeVisit({timestamp, url, page}) {
     const visitId = generateVisitDocId({timestamp})
     const visit = {
@@ -20,6 +27,15 @@ async function storeVisit({timestamp, url, page}) {
     return {visit}
 }
 
+/**
+* Log page visit and create a visit instance in the database
+*
+* @param {Number} tabId - tabId of the current visit
+* @param {string} url - URL of the visit document
+*
+* @returns {Visit} - instance of the visit
+* @returns {Page} - instance of the Page
+*/
 export async function logPageVisit({
     tabId,
     url,
@@ -42,6 +58,15 @@ export async function logPageVisit({
     return {visit, page: finalPage}
 }
 
+/**
+* Checks if logging is enabled and if enabled, logs the page
+*
+* @param {Number} tabId - tabId of the current visit
+* @param {string} url - URL of the visit document
+*
+* @returns {Visit} - instance of the visit
+* @returns {Page} - instance of the Page
+*/
 export async function maybeLogPageVisit({
     tabId,
     url,
@@ -70,7 +95,12 @@ export async function maybeLogPageVisit({
     })
 }
 
-// Log the visit/page in the currently active tab
+/**
+* Log the visit/page in the currently active tab
+*
+* @returns {Visit} - instance of the visit
+* @returns {Page} - instance of the Page
+*/
 export async function logActivePageVisit() {
     const tabs = await browser.tabs.query({active: true, currentWindow: true})
     const {url, id: tabId} = tabs[0]
