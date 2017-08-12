@@ -11,8 +11,12 @@ import { revisePageFields } from '..'
 import getFavIcon from './get-fav-icon'
 import makeScreenshot from './make-screenshot'
 
-
-// Extract interesting stuff from the current page and store it.
+/**
+* Extract page content and freeze-dry the page
+*
+* @param {string} pageId - page ID of the current page
+* @param {Number} tabId - tabId of the current visit
+*/
 async function performPageAnalysis({pageId, tabId}) {
     // Run these functions in the content script in the tab.
     const extractPageContent = remoteFunction('extractPageContent', {tabId})
@@ -54,6 +58,12 @@ async function performPageAnalysis({pageId, tabId}) {
     ])
 }
 
+/**
+* Waits for the DOM to load and then stores and freeze-dries the page
+*
+* @param {Page} page - page instance of the current page
+* @param {Number} tabId - tabId of the current visit
+*/
 export default async function analysePage({page, tabId}) {
     // Wait until its DOM has loaded, in case we got invoked before that.
     await whenPageDOMLoaded({tabId}) // TODO: catch e.g. tab close.

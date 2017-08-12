@@ -11,7 +11,7 @@ import { generateVisitDocId, isLoggable, shouldBeLogged } from '..'
 *
 * @param {Number} timestamp - timestamp of the visit
 * @param {string} url - URL of the visit document
-* @param {Page} page - page studb of the visit document
+* @param {Page} page - page stub of the visit document
 *
 * @returns {Visit} - instance of the visit
 */

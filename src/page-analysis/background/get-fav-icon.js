@@ -1,6 +1,12 @@
 import responseToDataUrl from 'response-to-data-url'
 
-// Get a tab's fav-icon (website logo) as a data URL
+/**
+* Get a tab's fav-icon (website logo) as a data URL
+*
+* @param {Number} tabId - tabId of the current visit
+*
+* @returns {string} - favicon of the page as a data URL
+*/
 async function getFavIcon({tabId}) {
     const tab = await browser.tabs.get(tabId)
 

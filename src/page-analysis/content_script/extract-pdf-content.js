@@ -1,4 +1,13 @@
-// Run PDF.js to extract text from each page and read document metadata.
+/**
+* Run PDF.js to extract text from each page and read document metadata.
+*
+* @param {PDF} pdfData - pdf from which the data is to be extracted.
+*
+* @returns {string} - full text contained in the PDF
+* @returns {string} - author of the PDF
+* @returns {string} - title of the PDF
+* @returns {string} - keywords contained in the PDF
+*/
 async function extractContent(pdfData) {
     // Import PDF.js only when needed, as it is large.
     require('pdfjs-dist') /* global PDFJS */
@@ -32,7 +41,12 @@ async function extractContent(pdfData) {
     }
 }
 
-// Given a PDF as blob or URL, return a promise of its text and metadata.
+/**
+* Given a PDF as blob or URL, return a promise of its text and metadata.
+*
+* @param {string} url - URL of the PDF
+* @param {Blob} blob -content of the PDF as a Blob
+*/
 export default async function extractPdfContent({url, blob}) {
     // Fetch document if only a URL is given.
     if (blob === undefined) {

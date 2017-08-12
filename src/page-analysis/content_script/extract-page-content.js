@@ -4,7 +4,15 @@ import { getMetadata, metadataRules } from 'page-metadata-parser'
 import extractPdfContent from './extract-pdf-content'
 
 
-// Extract the text content from web pages and PDFs.
+/**
+* Extract the text content from web pages and PDFs.
+*
+* @param {string} url - URL of the current page
+* @param {Document} doc - Document element of the current page
+*
+* @returns {string} - full text contained in the document
+* @returns {Array} - selected metadata from the document
+*/
 export default async function extractPageContent({
     // By default, use the globals window and document.
     url = window.location.href,
