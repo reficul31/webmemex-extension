@@ -11,7 +11,14 @@ export const Sameness = {
     UNKNOWN: NaN,  // Not enough information to make a comparison.
 }
 
-// Get a rough similarity metric between strings (a number between 0 and 1).
+/**
+* Get a rough similarity metric between strings (a number between 0 and 1).
+*
+* @param {string} text1 -first text to be compared
+* @param {string} text2 -second text to be compared
+*
+* @returns {Number} - quntifies the similarity of the two texts
+*/
 function stringSimilarity(text1, text2) {
     const dmp = new DiffMatchPatch()
     dmp.Diff_Timeout = 0.1
@@ -23,7 +30,14 @@ function stringSimilarity(text1, text2) {
     return similarity
 }
 
-// Tell how similar two strings are in a qualitative way.
+/**
+* Tell how similar two strings are in a qualitative way.
+*
+* @param {string} text1 -first text to be compared
+* @param {string} text2 -second text to be compared
+*
+* @returns {Number} - quntifies the similarity of the two texts
+*/
 function textSameness(text1, text2) {
     if (!text1 || !text2) { return Sameness.UNKNOWN }
 
@@ -43,7 +57,14 @@ function textSameness(text1, text2) {
     return Sameness.UNRELATED
 }
 
-// Tell to which degree two versions of a page can be considered to be the same.
+/**
+* Tell to which degree two versions of a page can be considered to be the same.
+*
+* @param {string} page1 -first Page to be compared
+* @param {string} page2 -second Page to be compared
+*
+* @returns {Number} - quntifies the similarity of the two Pages
+*/
 export default function determinePageSameness(page1, page2) {
     const pages = [page1, page2]
 

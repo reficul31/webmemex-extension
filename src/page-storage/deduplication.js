@@ -7,7 +7,13 @@ import db from 'src/pouchdb'
 import updateDoc from 'src/util/pouchdb-update-doc'
 import { getTimestamp } from 'src/activity-logger'
 import determinePageSameness, { Sameness } from './sameness'
-
+/**
+* Quantifies the content matching of a page
+*
+* @param {Number} sameness - the degree of sameness of two pages
+*
+* @returns {string} - the degree of sameness as a string
+*/
 function samenessLinkType({sameness}) {
     const types = {
         [Sameness.EXACTLY]: 'sameAs',
@@ -21,6 +27,12 @@ function samenessLinkType({sameness}) {
     return types[sameness]
 }
 
+/**
+* Remove the stored content of the page. Eg.Screenshots, page content, etc.
+*
+* @param {Page} page - Page instance of the page
+* @param {string} pageId - page ID of the page
+*/
 async function forgetPageContents({page, pageId = page._id}) {
     // Remove stored content, screenshots, etcetera.
     await updateDoc(db, pageId, doc => ({
@@ -30,6 +42,13 @@ async function forgetPageContents({page, pageId = page._id}) {
     }))
 }
 
+/**
+* Adds a link to the document
+*
+* @param {string} targetId -
+* @param {string} sourceId -
+* @param {string} linkType -
+*/
 async function addLink({targetId, sourceId, linkType}) {
     await updateDoc(db, sourceId, doc => ({
         ...doc,
@@ -37,6 +56,13 @@ async function addLink({targetId, sourceId, linkType}) {
     }))
 }
 
+/**
+* Replace the page with a redirected page.
+*
+* @param {Page} oldPage -
+* @param {Page} newPage -
+* @param {Number} sameness -
+*/
 async function replaceWithRedirect({oldPage, newPage, sameness}) {
     await forgetPageContents({page: oldPage})
     // Add a reference that indicates where to find usable content instead.
@@ -53,7 +79,14 @@ async function replaceWithRedirect({oldPage, newPage, sameness}) {
     })
 }
 
-// Tells whether the record quality of one page is better than that of the other.
+/**
+* Tells whether the record quality of one page is better than that of the other.
+*
+* @param {Page} page -
+* @param {Page} comparisonPage -
+*
+* @returns {boolean} -
+*/
 function hasHigherFidelity(page, comparisonPage) {
     const hasFrozenPage = page =>
         (get(['_attachments', 'frozen-page.html'])(page) !== undefined)
@@ -64,6 +97,14 @@ function hasHigherFidelity(page, comparisonPage) {
     return false
 }
 
+/**
+* Try and deduplicate a given page with its same page candidates.
+*
+* @param {Page} page -
+* @param {Array} samePageCandidates -
+*
+* @returns {Page} -
+*/
 export default async function tryDedupePage({
     page,
     samePageCandidates,

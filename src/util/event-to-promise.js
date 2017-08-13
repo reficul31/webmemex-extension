@@ -22,6 +22,14 @@
 // - reason (optional, only for `reject`):
 //     Like `value`, but for specifying the reason to reject with.
 
+/**
+* Convert an event to a promise
+*
+* @param {Function} resolve - function which should resolve the promise
+* @param {Function} reject - function which should reject the promise
+*
+* @returns {Promise} - resolves when resolveOpts function fires, rejects when rejectsOpts function fires
+*/
 export default function eventToPromise({
     resolve: resolveOpts,
     reject: rejectOpts,
@@ -84,6 +92,13 @@ export default function eventToPromise({
     })
 }
 
+/**
+* Returns an instance of an error from an Object
+*
+* @param {Object} reason - object to be cast as an error
+*
+* @returns {Error} - Error instance from the object
+*/
 function castToError(reason) {
     if (reason instanceof Error) return reason
     if (reason instanceof Object) return new Error(JSON.stringify(reason))

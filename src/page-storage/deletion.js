@@ -2,6 +2,11 @@ import db from 'src/pouchdb'
 import { findVisits } from 'src/search/find-visits'
 import { getEquivalentPages } from 'src/search/find-pages'
 
+/**
+* Deletes a visit and its page.
+*
+* @param {string} visitId - visit ID of the visit to be deleted
+*/
 export async function deleteVisitAndPage({visitId}) {
     // Delete the visit object
     const visit = await db.get(visitId)
@@ -13,6 +18,11 @@ export async function deleteVisitAndPage({visitId}) {
     await deletePageIfOrphaned({pageId})
 }
 
+/**
+* Delete a page if it is orphaned
+*
+* @param {string} pageId - pageId of the page to be checked
+*/
 async function deletePageIfOrphaned({pageId}) {
     // Because of deduplication, different page objects may redirect to this
     // one, or this one may redirect to others. So we check for visits either
