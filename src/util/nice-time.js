@@ -1,20 +1,47 @@
-
+/**
+* Returns the hour as a string
+*
+* @param {Date} date - date to be processed
+*
+* @returns {string} - hour of the Date as a string
+*/
 function hourString(date) {
     // return date.toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'})
     return `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}`
 }
 
+/**
+* Returns the day as a string
+*
+* @param {Date} date - date to be processed
+*
+* @returns {string} - day of the Date as a string
+*/
 function dayString(date) {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
     return days[date.getDay()]
 }
 
+/**
+* Returns the month as a string
+*
+* @param {Date} date - date to be processed
+*
+* @returns {string} - month of the Date as a string
+*/
 function monthString(date) {
     const months = ['Jan', 'Feb', 'March', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
     return months[date.getMonth()]
 }
 
-// Get something nicely readable - at least to my personal taste.
+/**
+* Used to format the time format to get a readable string
+*
+* @param {Date} date - date to be processed
+* @param {Date} now - date from where the difference is to be measured
+*
+* @returns {string} - a human redable formatted string for the time of the Date instance from now
+*/
 export default function niceTime(date, {now = undefined} = {}) {
     const then = new Date(date)
     now = now || new Date()
@@ -36,6 +63,14 @@ export default function niceTime(date, {now = undefined} = {}) {
     return `${then.getDate()} ${monthString(then)} ${then.getFullYear()}`
 }
 
+/**
+* Used to format the date format to get a readable string
+*
+* @param {Date} date - date to be processed
+* @param {Date} now - date from where the difference is to be measured
+*
+* @returns {string} - a human redable formatted string for the date of the Date instance from now
+*/
 export function niceDate(date, {now = new Date()} = {}) {
     const then = new Date(date)
     if (then.getYear() !== now.getYear()) {
